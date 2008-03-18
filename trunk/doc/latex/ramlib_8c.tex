@@ -1,0 +1,48 @@
+\hypertarget{ramlib_8c}{
+\section{ramlib.c File Reference}
+\label{ramlib_8c}\index{ramlib.c@{ramlib.c}}
+}
+{\tt \#include \char`\"{}ramlib.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{ramlib_8c_a212f497d0e60a46a30582320c2fefef}{\_\-main} ()
+\item 
+float \hyperlink{ramlib_8c_f129554ebce2d89e788eb46f3a3547bc}{value\_\-at\_\-point} (ESI expression, ESI var, float x)
+\item 
+float \hyperlink{ramlib_8c_549bc93c3536bde8ffbcca9bb5035fda}{riemann\_\-sum} (ESI expression, ESI var, float lower\_\-bounds, float upper\_\-bounds, unsigned int numsteps, float offset)
+\item 
+float \hyperlink{ramlib_8c_0415ba140e87ce3dca1acc1017f36fc7}{trap\_\-rule} (ESI expression, ESI var, float lower\_\-bounds, float upper\_\-bounds, unsigned int numsteps)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{ramlib_8c_a212f497d0e60a46a30582320c2fefef}{
+\index{ramlib.c@{ramlib.c}!\_\-main@{\_\-main}}
+\index{\_\-main@{\_\-main}!ramlib.c@{ramlib.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void \_\-main ()}}
+\label{ramlib_8c_a212f497d0e60a46a30582320c2fefef}
+
+
+The entry point of the program. Takes arguments as follow from the expression stack: an expression to be integrated, the variable of integration, the lower bounds (float), the upper bounds (float), number of steps, and the function index, which calls the corresponding function. 1=lram 2=mram 3=rram 4=trapezoid rule \hypertarget{ramlib_8c_549bc93c3536bde8ffbcca9bb5035fda}{
+\index{ramlib.c@{ramlib.c}!riemann\_\-sum@{riemann\_\-sum}}
+\index{riemann\_\-sum@{riemann\_\-sum}!ramlib.c@{ramlib.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float riemann\_\-sum (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em lower\_\-bounds}, \/  float {\em upper\_\-bounds}, \/  unsigned int {\em numsteps}, \/  float {\em offset})}}
+\label{ramlib_8c_549bc93c3536bde8ffbcca9bb5035fda}
+
+
+Returns the rieman sum, for expression from lower\_\-bounds to upper\_\-bounds, with numsteps number of steps, using var as the variable of integration. Assuming lram is the default operation, offset $\ast$ dx (with var as x), would be added to the x coordinate of every sample point. \hypertarget{ramlib_8c_0415ba140e87ce3dca1acc1017f36fc7}{
+\index{ramlib.c@{ramlib.c}!trap\_\-rule@{trap\_\-rule}}
+\index{trap\_\-rule@{trap\_\-rule}!ramlib.c@{ramlib.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float trap\_\-rule (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em lower\_\-bounds}, \/  float {\em upper\_\-bounds}, \/  unsigned int {\em numsteps})}}
+\label{ramlib_8c_0415ba140e87ce3dca1acc1017f36fc7}
+
+
+This function is very similar to rram, except that it computes the trapezoid rule instead, and has no argument offset, because there are no variations on the trapeziod rule. \hypertarget{ramlib_8c_f129554ebce2d89e788eb46f3a3547bc}{
+\index{ramlib.c@{ramlib.c}!value\_\-at\_\-point@{value\_\-at\_\-point}}
+\index{value\_\-at\_\-point@{value\_\-at\_\-point}!ramlib.c@{ramlib.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float value\_\-at\_\-point (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em x})}}
+\label{ramlib_8c_f129554ebce2d89e788eb46f3a3547bc}
+
+
+Returns the float value of expression, when var is set to the value x. 
