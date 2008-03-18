@@ -1,0 +1,55 @@
+\hypertarget{ramlib_8h}{
+\section{ramlib.h File Reference}
+\label{ramlib_8h}\index{ramlib.h@{ramlib.h}}
+}
+{\tt \#include $<$tigcclib.h$>$}\par
+{\tt \#include \char`\"{}jstack.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{ramlib_8h_f2024b663e5962bae93a9f72f33821ae}{NUM\_\-ARGS}~6
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+float \hyperlink{ramlib_8h_f129554ebce2d89e788eb46f3a3547bc}{value\_\-at\_\-point} (ESI expression, ESI var, float x)
+\item 
+float \hyperlink{ramlib_8h_549bc93c3536bde8ffbcca9bb5035fda}{riemann\_\-sum} (ESI expression, ESI var, float lower\_\-bounds, float upper\_\-bounds, unsigned int numsteps, float offset)
+\item 
+float \hyperlink{ramlib_8h_0415ba140e87ce3dca1acc1017f36fc7}{trap\_\-rule} (ESI expression, ESI var, float lower\_\-bounds, float upper\_\-bounds, unsigned int numsteps)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ramlib_8h_f2024b663e5962bae93a9f72f33821ae}{
+\index{ramlib.h@{ramlib.h}!NUM\_\-ARGS@{NUM\_\-ARGS}}
+\index{NUM\_\-ARGS@{NUM\_\-ARGS}!ramlib.h@{ramlib.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define NUM\_\-ARGS~6}}
+\label{ramlib_8h_f2024b663e5962bae93a9f72f33821ae}
+
+
+The number of arguments that this program will take from the expression stack. 
+
+\subsection{Function Documentation}
+\hypertarget{ramlib_8h_549bc93c3536bde8ffbcca9bb5035fda}{
+\index{ramlib.h@{ramlib.h}!riemann\_\-sum@{riemann\_\-sum}}
+\index{riemann\_\-sum@{riemann\_\-sum}!ramlib.h@{ramlib.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float riemann\_\-sum (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em lower\_\-bounds}, \/  float {\em upper\_\-bounds}, \/  unsigned int {\em numsteps}, \/  float {\em offset})}}
+\label{ramlib_8h_549bc93c3536bde8ffbcca9bb5035fda}
+
+
+Returns the rieman sum, for expression from lower\_\-bounds to upper\_\-bounds, with numsteps number of steps, using var as the variable of integration. Assuming lram is the default operation, offset $\ast$ dx (with var as x), would be added to the x coordinate of every sample point. \hypertarget{ramlib_8h_0415ba140e87ce3dca1acc1017f36fc7}{
+\index{ramlib.h@{ramlib.h}!trap\_\-rule@{trap\_\-rule}}
+\index{trap\_\-rule@{trap\_\-rule}!ramlib.h@{ramlib.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float trap\_\-rule (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em lower\_\-bounds}, \/  float {\em upper\_\-bounds}, \/  unsigned int {\em numsteps})}}
+\label{ramlib_8h_0415ba140e87ce3dca1acc1017f36fc7}
+
+
+This function is very similar to rram, except that it computes the trapezoid rule instead, and has no argument offset, because there are no variations on the trapeziod rule. \hypertarget{ramlib_8h_f129554ebce2d89e788eb46f3a3547bc}{
+\index{ramlib.h@{ramlib.h}!value\_\-at\_\-point@{value\_\-at\_\-point}}
+\index{value\_\-at\_\-point@{value\_\-at\_\-point}!ramlib.h@{ramlib.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float value\_\-at\_\-point (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em x})}}
+\label{ramlib_8h_f129554ebce2d89e788eb46f3a3547bc}
+
+
+Returns the float value of expression, when var is set to the value x. 
