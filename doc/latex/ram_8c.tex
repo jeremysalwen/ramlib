@@ -2,51 +2,43 @@
 \section{ram.c File Reference}
 \label{ram_8c}\index{ram.c@{ram.c}}
 }
-{\tt \#include \char`\"{}ram.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ram.h\char`\"{}}\par
 \subsection*{Functions}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-void \hyperlink{ram_8c_a212f497d0e60a46a30582320c2fefef}{\_\-main} ()
+void \hyperlink{ram_8c_aa212f497d0e60a46a30582320c2fefef}{\_\-main} ()
 \item 
-float \hyperlink{ram_8c_f129554ebce2d89e788eb46f3a3547bc}{value\_\-at\_\-point} (ESI expression, ESI var, float x)
+float \hyperlink{ram_8c_af129554ebce2d89e788eb46f3a3547bc}{value\_\-at\_\-point} (ESI expression, ESI var, float x)
 \item 
-float \hyperlink{ram_8c_549bc93c3536bde8ffbcca9bb5035fda}{riemann\_\-sum} (ESI expression, ESI var, float lower\_\-bounds, float upper\_\-bounds, unsigned int numsteps, float offset)
+float \hyperlink{ram_8c_a549bc93c3536bde8ffbcca9bb5035fda}{riemann\_\-sum} (ESI expression, ESI var, float lower\_\-bounds, float upper\_\-bounds, unsigned int numsteps, float offset)
 \item 
-float \hyperlink{ram_8c_0415ba140e87ce3dca1acc1017f36fc7}{trap\_\-rule} (ESI expression, ESI var, float lower\_\-bounds, float upper\_\-bounds, unsigned int numsteps)
-\end{CompactItemize}
+float \hyperlink{ram_8c_a0415ba140e87ce3dca1acc1017f36fc7}{trap\_\-rule} (ESI expression, ESI var, float lower\_\-bounds, float upper\_\-bounds, unsigned int numsteps)
+\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{ram_8c_a212f497d0e60a46a30582320c2fefef}{
+\hypertarget{ram_8c_aa212f497d0e60a46a30582320c2fefef}{
 \index{ram.c@{ram.c}!\_\-main@{\_\-main}}
 \index{\_\-main@{\_\-main}!ram.c@{ram.c}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void \_\-main ()}}
-\label{ram_8c_a212f497d0e60a46a30582320c2fefef}
-
-
-The entry point of the program. Takes arguments as follow from the expression stack: an expression to be integrated, the variable of integration, the lower bounds (float), the upper bounds (float), number of steps, and the function index, which instructs the \hyperlink{ram_8c_a212f497d0e60a46a30582320c2fefef}{\_\-main()} to call the corresponding function. \par
+\subsubsection[{\_\-main}]{\setlength{\rightskip}{0pt plus 5cm}void \_\-main ()}}
+\label{ram_8c_aa212f497d0e60a46a30582320c2fefef}
+The entry point of the program. Takes arguments as follow from the expression stack: an expression to be integrated, the variable of integration, the lower bounds (float), the upper bounds (float), number of steps, and the function index, which instructs the \hyperlink{ram_8c_aa212f497d0e60a46a30582320c2fefef}{\_\-main()} to call the corresponding function. \par
  0=lram \par
  1=mram \par
  2=rram \par
- 3=trapezoid rule \hypertarget{ram_8c_549bc93c3536bde8ffbcca9bb5035fda}{
+ 3=trapezoid rule \hypertarget{ram_8c_a549bc93c3536bde8ffbcca9bb5035fda}{
 \index{ram.c@{ram.c}!riemann\_\-sum@{riemann\_\-sum}}
 \index{riemann\_\-sum@{riemann\_\-sum}!ram.c@{ram.c}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float riemann\_\-sum (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em lower\_\-bounds}, \/  float {\em upper\_\-bounds}, \/  unsigned int {\em numsteps}, \/  float {\em offset})}}
-\label{ram_8c_549bc93c3536bde8ffbcca9bb5035fda}
-
-
-Returns the rieman sum, for expression from lower\_\-bounds to upper\_\-bounds, with numsteps number of steps, using var as the variable of integration. Assuming lram is the default operation, offset $\ast$ dx (with var as x), would be added to the x coordinate of every sample point. \hypertarget{ram_8c_0415ba140e87ce3dca1acc1017f36fc7}{
+\subsubsection[{riemann\_\-sum}]{\setlength{\rightskip}{0pt plus 5cm}float riemann\_\-sum (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em lower\_\-bounds}, \/  float {\em upper\_\-bounds}, \/  unsigned int {\em numsteps}, \/  float {\em offset})}}
+\label{ram_8c_a549bc93c3536bde8ffbcca9bb5035fda}
+Returns the Riemann sum of the argument \char`\"{}expression\char`\"{}. The \char`\"{}var\char`\"{} argument is the variable which changes; it is analagus to the variable of integration. The bounds are determind by lower\_\-bounds and upper\_\-bounds, and the number of steps is determined by numsteps. Assuming left Riemann sums are the default operation, offset $\ast$ dx (with var as x), will be added to the location of every sampling point. This effectively shifts over the location on which the sum is being taken. Thus, for example, one could do a right riemann sum by setting offset to 1. \hypertarget{ram_8c_a0415ba140e87ce3dca1acc1017f36fc7}{
 \index{ram.c@{ram.c}!trap\_\-rule@{trap\_\-rule}}
 \index{trap\_\-rule@{trap\_\-rule}!ram.c@{ram.c}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float trap\_\-rule (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em lower\_\-bounds}, \/  float {\em upper\_\-bounds}, \/  unsigned int {\em numsteps})}}
-\label{ram_8c_0415ba140e87ce3dca1acc1017f36fc7}
-
-
-This function is very similar to rram, except that it computes the trapezoid rule instead, and has no argument offset, because there are no variations on the trapeziod rule. \hypertarget{ram_8c_f129554ebce2d89e788eb46f3a3547bc}{
+\subsubsection[{trap\_\-rule}]{\setlength{\rightskip}{0pt plus 5cm}float trap\_\-rule (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em lower\_\-bounds}, \/  float {\em upper\_\-bounds}, \/  unsigned int {\em numsteps})}}
+\label{ram_8c_a0415ba140e87ce3dca1acc1017f36fc7}
+This function is very similar to riemann\_\-sum, except that it computes the trapezoid rule instead, and $\ast$ has no \char`\"{}offset\char`\"{} argument, because there are no variations on the trapeziod rule. \hypertarget{ram_8c_af129554ebce2d89e788eb46f3a3547bc}{
 \index{ram.c@{ram.c}!value\_\-at\_\-point@{value\_\-at\_\-point}}
 \index{value\_\-at\_\-point@{value\_\-at\_\-point}!ram.c@{ram.c}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float value\_\-at\_\-point (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em x})}}
-\label{ram_8c_f129554ebce2d89e788eb46f3a3547bc}
-
-
+\subsubsection[{value\_\-at\_\-point}]{\setlength{\rightskip}{0pt plus 5cm}float value\_\-at\_\-point (ESI {\em expression}, \/  ESI {\em var}, \/  float {\em x})}}
+\label{ram_8c_af129554ebce2d89e788eb46f3a3547bc}
 Returns the float value of expression, when var is set to the value x. 

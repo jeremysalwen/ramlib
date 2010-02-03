@@ -2,65 +2,53 @@
 \section{jstack.c File Reference}
 \label{jstack_8c}\index{jstack.c@{jstack.c}}
 }
-{\tt \#include \char`\"{}jstack.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}jstack.h\char`\"{}}\par
 \subsection*{Functions}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-void \hyperlink{jstack_8c_c4d2f4783892a018890a78cff16979e5}{check\_\-arg\_\-nums} (unsigned int num\_\-args)
+void \hyperlink{jstack_8c_ac4d2f4783892a018890a78cff16979e5}{check\_\-arg\_\-nums} (unsigned int num\_\-args)
 \item 
-ESI \hyperlink{jstack_8c_47fa81d44bf3978f734f64e380044351}{get\_\-var\_\-expr} (ESI $\ast$arg\_\-ptr)
+ESI \hyperlink{jstack_8c_a47fa81d44bf3978f734f64e380044351}{get\_\-var\_\-expr} (ESI $\ast$arg\_\-ptr)
 \item 
-ESI \hyperlink{jstack_8c_5b334706d495f659713f1704efd6a92f}{get\_\-expr} (ESI $\ast$arg\_\-ptr)
+ESI \hyperlink{jstack_8c_a5b334706d495f659713f1704efd6a92f}{get\_\-expr} (ESI $\ast$arg\_\-ptr)
 \item 
-float \hyperlink{jstack_8c_d63829b38801f83eda097cf22d587a47}{get\_\-float} (ESI $\ast$ptr)
+float \hyperlink{jstack_8c_ad63829b38801f83eda097cf22d587a47}{get\_\-float} (ESI $\ast$ptr)
 \item 
-unsigned int \hyperlink{jstack_8c_cd5a01d67ddc78201a7c3c7f35b27714}{get\_\-int} (ESI $\ast$ptr)
+unsigned int \hyperlink{jstack_8c_acd5a01d67ddc78201a7c3c7f35b27714}{get\_\-int} (ESI $\ast$ptr)
 \item 
-void \hyperlink{jstack_8c_05332ea55e4c40d7f84c49c576395ff5}{check\_\-can\_\-be\_\-evaluated} (ESI expression, ESI var)
-\end{CompactItemize}
+void \hyperlink{jstack_8c_a05332ea55e4c40d7f84c49c576395ff5}{check\_\-can\_\-be\_\-evaluated} (ESI expression, ESI var)
+\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{jstack_8c_c4d2f4783892a018890a78cff16979e5}{
+\hypertarget{jstack_8c_ac4d2f4783892a018890a78cff16979e5}{
 \index{jstack.c@{jstack.c}!check\_\-arg\_\-nums@{check\_\-arg\_\-nums}}
 \index{check\_\-arg\_\-nums@{check\_\-arg\_\-nums}!jstack.c@{jstack.c}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void check\_\-arg\_\-nums (unsigned int {\em num\_\-args})}}
-\label{jstack_8c_c4d2f4783892a018890a78cff16979e5}
-
-
-Checks if the current number of args on the stack is greater or less than num\_\-args, and throws the corresponding error if so. \hypertarget{jstack_8c_05332ea55e4c40d7f84c49c576395ff5}{
+\subsubsection[{check\_\-arg\_\-nums}]{\setlength{\rightskip}{0pt plus 5cm}void check\_\-arg\_\-nums (unsigned int {\em num\_\-args})}}
+\label{jstack_8c_ac4d2f4783892a018890a78cff16979e5}
+Checks if the current number of args on the stack is greater or less than num\_\-args, and throws the corresponding error if so. \hypertarget{jstack_8c_a05332ea55e4c40d7f84c49c576395ff5}{
 \index{jstack.c@{jstack.c}!check\_\-can\_\-be\_\-evaluated@{check\_\-can\_\-be\_\-evaluated}}
 \index{check\_\-can\_\-be\_\-evaluated@{check\_\-can\_\-be\_\-evaluated}!jstack.c@{jstack.c}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void check\_\-can\_\-be\_\-evaluated (ESI {\em expression}, \/  ESI {\em var})}}
-\label{jstack_8c_05332ea55e4c40d7f84c49c576395ff5}
-
-
-Throws an error if the expression contains any variables other than var. \hypertarget{jstack_8c_5b334706d495f659713f1704efd6a92f}{
+\subsubsection[{check\_\-can\_\-be\_\-evaluated}]{\setlength{\rightskip}{0pt plus 5cm}void check\_\-can\_\-be\_\-evaluated (ESI {\em expression}, \/  ESI {\em var})}}
+\label{jstack_8c_a05332ea55e4c40d7f84c49c576395ff5}
+Throws an error if the expression contains any variables other than var. \hypertarget{jstack_8c_a5b334706d495f659713f1704efd6a92f}{
 \index{jstack.c@{jstack.c}!get\_\-expr@{get\_\-expr}}
 \index{get\_\-expr@{get\_\-expr}!jstack.c@{jstack.c}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ESI get\_\-expr (ESI $\ast$ {\em arg\_\-ptr})}}
-\label{jstack_8c_5b334706d495f659713f1704efd6a92f}
-
-
-Simply returns another pointer to arg\_\-ptr, and then makes arg\_\-ptr point to the next expression \hypertarget{jstack_8c_d63829b38801f83eda097cf22d587a47}{
+\subsubsection[{get\_\-expr}]{\setlength{\rightskip}{0pt plus 5cm}ESI get\_\-expr (ESI $\ast$ {\em arg\_\-ptr})}}
+\label{jstack_8c_a5b334706d495f659713f1704efd6a92f}
+Simply returns another pointer to arg\_\-ptr, and then makes arg\_\-ptr point to the next expression \hypertarget{jstack_8c_ad63829b38801f83eda097cf22d587a47}{
 \index{jstack.c@{jstack.c}!get\_\-float@{get\_\-float}}
 \index{get\_\-float@{get\_\-float}!jstack.c@{jstack.c}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float get\_\-float (ESI $\ast$ {\em ptr})}}
-\label{jstack_8c_d63829b38801f83eda097cf22d587a47}
-
-
-Converts any expression pointed to by ptr to a float, makes ptr point to the next expression, and returns the float. Will throw ER\_\-ARGUMENT if ptr cannot be simplified to a float. Will add a bcd of the float to the top of the stack. \hypertarget{jstack_8c_cd5a01d67ddc78201a7c3c7f35b27714}{
+\subsubsection[{get\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}float get\_\-float (ESI $\ast$ {\em ptr})}}
+\label{jstack_8c_ad63829b38801f83eda097cf22d587a47}
+Converts any expression pointed to by ptr to a float, makes ptr point to the next expression, and returns the float. Will throw ER\_\-ARGUMENT if ptr cannot be simplified to a float. Will add a bcd of the float to the top of the stack. \hypertarget{jstack_8c_acd5a01d67ddc78201a7c3c7f35b27714}{
 \index{jstack.c@{jstack.c}!get\_\-int@{get\_\-int}}
 \index{get\_\-int@{get\_\-int}!jstack.c@{jstack.c}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int get\_\-int (ESI $\ast$ {\em ptr})}}
-\label{jstack_8c_cd5a01d67ddc78201a7c3c7f35b27714}
-
-
-Converts any expression pointed to by ptr to a positive int, makes ptr point to the next expression, and returns the int. Will throw ER\_\-ARGUMENT if ptr cannot be simplified to an int, however, it will convert if it is negative or decimal, it will simply round or take the absolute value. Will add a bcd of the float to the top of the stack. \hypertarget{jstack_8c_47fa81d44bf3978f734f64e380044351}{
+\subsubsection[{get\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int get\_\-int (ESI $\ast$ {\em ptr})}}
+\label{jstack_8c_acd5a01d67ddc78201a7c3c7f35b27714}
+Converts any expression pointed to by ptr to a positive int, makes ptr point to the next expression, and returns the int. Will throw ER\_\-ARGUMENT if ptr cannot be simplified to an int, however, it will convert if it is negative or decimal, it will simply round or take the absolute value. Will add a bcd of the float to the top of the stack. \hypertarget{jstack_8c_a47fa81d44bf3978f734f64e380044351}{
 \index{jstack.c@{jstack.c}!get\_\-var\_\-expr@{get\_\-var\_\-expr}}
 \index{get\_\-var\_\-expr@{get\_\-var\_\-expr}!jstack.c@{jstack.c}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ESI get\_\-var\_\-expr (ESI $\ast$ {\em arg\_\-ptr})}}
-\label{jstack_8c_47fa81d44bf3978f734f64e380044351}
-
-
+\subsubsection[{get\_\-var\_\-expr}]{\setlength{\rightskip}{0pt plus 5cm}ESI get\_\-var\_\-expr (ESI $\ast$ {\em arg\_\-ptr})}}
+\label{jstack_8c_a47fa81d44bf3978f734f64e380044351}
 Returns the expression, and makes arg\_\-ptr point to the next expression on the stack. If the expression originally pointed to is not a variable, it will throw an error. 
