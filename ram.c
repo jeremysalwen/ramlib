@@ -12,6 +12,7 @@
 *
 * For reentrant library functions which do Riemann sums and trapeziod rule calculations,
 *  see  riemann_sum() or trap_rule() in ram.c.
+*
 * Various functions dealing with popping or examining elements on the expression stack are located in
 *  jstack.c.
 *

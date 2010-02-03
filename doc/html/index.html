@@ -18,7 +18,8 @@
 </div>
 <div class="contents">
 <h1>Riemann Sums Program Documentation</h1><h3>2.0 </h3><p>This is a program which computes the Riemann sums and trapezoid rule sums of an expression over a given interval with a given number of steps. It is used for the estimation of the area under a curve, i.e. an integral. For information on Riemann sums, see <a href="http://en.wikipedia.org/wiki/Riemann_sum">http://en.wikipedia.org/wiki/Riemann_sum</a> . The entry point is <a class="el" href="ram_8c.html#aa212f497d0e60a46a30582320c2fefef">_main()</a> in <a class="el" href="ram_8c.html">ram.c</a> when run on a graphing calculator. From the user's point of view, the program is a function, taking arguments and returning a result. From the code's point of view, it must pop off the arguments from an "expression stack", in order to access the algebraic expressions it is passed. It then pushes the result back onto the stack. This is useful as an executable on the calculator, but not as useful when called from other C or assembly language programs.</p>
-<p>For reentrant library functions which do Riemann sums and trapeziod rule calculations, see <a class="el" href="ram_8c.html#a549bc93c3536bde8ffbcca9bb5035fda">riemann_sum()</a> or <a class="el" href="ram_8c.html#a0415ba140e87ce3dca1acc1017f36fc7">trap_rule()</a> in <a class="el" href="ram_8c.html">ram.c</a>. Various functions dealing with popping or examining elements on the expression stack are located in <a class="el" href="jstack_8c.html">jstack.c</a>.</p>
+<p>For reentrant library functions which do Riemann sums and trapeziod rule calculations, see <a class="el" href="ram_8c.html#a549bc93c3536bde8ffbcca9bb5035fda">riemann_sum()</a> or <a class="el" href="ram_8c.html#a0415ba140e87ce3dca1acc1017f36fc7">trap_rule()</a> in <a class="el" href="ram_8c.html">ram.c</a>.</p>
+<p>Various functions dealing with popping or examining elements on the expression stack are located in <a class="el" href="jstack_8c.html">jstack.c</a>.</p>
 <h2><a class="anchor" id="Arguments">
 Arguments</a></h2>
 <p>The function call on the graphing calculator is of the form <b> ramlib(expression, var, lower_bounds, upper_bounds, number_of_steps, function_index) </b></p>
@@ -46,7 +47,7 @@ function index</a></h3>
  2 = right riemann sum <br/>
  3 = trapezoid rule </p>
 </div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Tue Feb 2 19:46:02 2010 for Riemansums by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Tue Feb 2 19:48:03 2010 for Riemansums by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>
